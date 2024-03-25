@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Guitar Scales</string>
+
+    <string-array name="guitar_scales_array">
+        <item>Major</item>
+        <item>Minor</item>
+        <item>Blues</item>
+        <item>Pentatonic</item>
+        <!-- Add more scales as needed -->
+    </string-array>
+</resources>
