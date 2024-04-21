@@ -26,6 +26,7 @@
 
                 <!--open string-->
                 <Button
+                    android:id="@+id/button_e_6th_open"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -33,6 +34,7 @@
 
                 <!--1st fret-->
                 <Button
+                    android:id="@+id/button_f_6th"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -40,6 +42,7 @@
 
                 <!--2nd fret-->
                 <Button
+                    android:id="@+id/button_f_sharp_6th"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
