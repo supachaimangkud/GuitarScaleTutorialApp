@@ -24,21 +24,57 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupButtonNotes(scale: String) {
         val notesMap = getNotesForScale(scale)
-        val buttonE: Button = findViewById(R.id.button_e_6th_open)
-        buttonE.setOnClickListener {
+        val buttonE_6th: Button = findViewById(R.id.button_e_6th_open)
+        buttonE_6th.setOnClickListener {
             setupMediaPlayer(notesMap["E"] ?: R.raw.e_6th_open)
             playNote()
         }
 
-        val buttonF: Button = findViewById(R.id.button_f_6th)
-        buttonF.setOnClickListener {
-            setupMediaPlayer(notesMap["E"] ?: R.raw.f_6th)
+        val buttonF_6th: Button = findViewById(R.id.button_f_6th)
+        buttonF_6th.setOnClickListener {
+            setupMediaPlayer(notesMap["F"] ?: R.raw.f_6th)
             playNote()
         }
 
-        val buttonFsharp: Button = findViewById(R.id.button_f_sharp_6th)
-        buttonFsharp.setOnClickListener {
-            setupMediaPlayer(notesMap["E"] ?: R.raw.f_sharp_6th)
+        val buttonFSharp_6th: Button = findViewById(R.id.button_f_sharp_6th)
+        buttonFSharp_6th.setOnClickListener {
+            setupMediaPlayer(notesMap["F"] ?: R.raw.f_sharp_6th)
+            playNote()
+        }
+
+        val buttonG_6th: Button = findViewById(R.id.button_g_6th)
+        buttonG_6th.setOnClickListener {
+            setupMediaPlayer(notesMap["G"] ?: R.raw.g_6th)
+            playNote()
+        }
+
+        val buttonGSharp_6th: Button = findViewById(R.id.button_g_sharp_6th)
+        buttonGSharp_6th.setOnClickListener {
+            setupMediaPlayer(notesMap["G#"] ?: R.raw.g_sharp_6th)
+            playNote()
+        }
+
+        val buttonA_6th: Button = findViewById(R.id.button_a_6th)
+        buttonA_6th.setOnClickListener {
+            setupMediaPlayer(notesMap["A"] ?: R.raw.a_6th)
+            playNote()
+        }
+
+        val buttonASharp_6th: Button = findViewById(R.id.button_a_sharp_6th)
+        buttonASharp_6th.setOnClickListener {
+            setupMediaPlayer(notesMap["A#"] ?: R.raw.a_sharp_6th)
+            playNote()
+        }
+
+        val buttonB_6th: Button = findViewById(R.id.button_b_6th)
+        buttonB_6th.setOnClickListener {
+            setupMediaPlayer(notesMap["B"] ?: R.raw.b_6th)
+            playNote()
+        }
+
+        val buttonC_6th: Button = findViewById(R.id.button_c_6th)
+        buttonC_6th.setOnClickListener {
+            setupMediaPlayer(notesMap["C"] ?: R.raw.c_6th)
             playNote()
         }
     }
@@ -46,7 +82,9 @@ class MainActivity : AppCompatActivity() {
     private fun getNotesForScale(scale: String): Map<String, Int> {
         // Return a map of note labels to raw resource IDs
         return when (scale) {
-            "Major" -> mapOf("E" to R.raw.e_6th_open, "F" to R.raw.f_6th) // Example mapping
+            "Major" -> mapOf("E" to R.raw.e_6th_open, "F" to R.raw.f_6th,
+                "F#" to R.raw.f_sharp_6th, "G" to R.raw.g_6th, "G#" to R.raw.g_sharp_6th,
+                "A" to R.raw.a_6th, "B" to R.raw.b_6th, "C" to R.raw.c_6th)
             else -> emptyMap()
         }
     }
