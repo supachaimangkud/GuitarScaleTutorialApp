@@ -174,17 +174,42 @@ class MainActivity : AppCompatActivity() {
             playNote()
         }
 
+        //5th string 11th fret
         val buttonGSharp_5th: Button = findViewById(R.id.button_g_sharp_5th)
         buttonGSharp_5th.setOnClickListener {
             setupMediaPlayer(notesMap["G# 5th"] ?: R.raw.g_sharp_5th)
             playNote()
         }
 
+        //5th string 12th fret
         val buttonA_5th: Button = findViewById(R.id.button_a_5th)
         buttonA_5th.setOnClickListener {
             setupMediaPlayer(notesMap["A 5th"] ?: R.raw.a_5th)
             playNote()
         }
+
+
+        //4th string d open string
+        val buttonDOpen_4th: Button = findViewById(R.id.button_d_open_4th)
+        buttonDOpen_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["D 4th Open"] ?: R.raw.d_4th_open)
+            playNote()
+        }
+
+        //4th string d open string
+        val buttonDSharp_4th: Button = findViewById(R.id.button_d_sharp_4th)
+        buttonDSharp_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["D# 4th"] ?: R.raw.d_sharp_4th)
+            playNote()
+        }
+
+        //4th string d open string
+        val buttonE_4th: Button = findViewById(R.id.button_e_4th)
+        buttonE_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["E 4th"] ?: R.raw.e_4th)
+            playNote()
+        }
+
 
     }
 
