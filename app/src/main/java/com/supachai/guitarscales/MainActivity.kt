@@ -196,21 +196,89 @@ class MainActivity : AppCompatActivity() {
             playNote()
         }
 
-        //4th string d open string
+        //4th string D#
         val buttonDSharp_4th: Button = findViewById(R.id.button_d_sharp_4th)
         buttonDSharp_4th.setOnClickListener {
             setupMediaPlayer(notesMap["D# 4th"] ?: R.raw.d_sharp_4th)
             playNote()
         }
 
-        //4th string d open string
+        //4th string E
         val buttonE_4th: Button = findViewById(R.id.button_e_4th)
         buttonE_4th.setOnClickListener {
             setupMediaPlayer(notesMap["E 4th"] ?: R.raw.e_4th)
             playNote()
         }
 
+        //4th string F
+        val buttonF_4th: Button = findViewById(R.id.button_f_4th)
+        buttonF_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["F 4th"] ?: R.raw.f_4th)
+            playNote()
+        }
 
+        //4th string F sharp
+        val buttonFSharp_4th: Button = findViewById(R.id.button_f_sharp_4th)
+        buttonFSharp_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["F# 4th"] ?: R.raw.f_sharp_4th)
+            playNote()
+        }
+
+        //4th string G
+        val buttonG_4th: Button = findViewById(R.id.button_g_4th)
+        buttonG_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["G 4th"] ?: R.raw.g_4th)
+            playNote()
+        }
+
+        //4th string G#
+        val buttonGSharp_4th: Button = findViewById(R.id.button_g_sharp_4th)
+        buttonGSharp_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["G# 4th"] ?: R.raw.g_sharp_4th)
+            playNote()
+        }
+
+        //4th string A
+        val buttonA_4th: Button = findViewById(R.id.button_a_4th)
+        buttonA_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["A 4th"] ?: R.raw.a_4th)
+            playNote()
+        }
+
+        //4th string A#
+        val buttonASharp_4th: Button = findViewById(R.id.button_a_sharp_4th)
+        buttonASharp_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["A# 4th"] ?: R.raw.a_sharp_4th)
+            playNote()
+        }
+
+        //4th string B
+        val buttonB_4th: Button = findViewById(R.id.button_b_4th)
+        buttonB_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["B 4th"] ?: R.raw.b_4th)
+            playNote()
+        }
+
+        //4th string C
+        val buttonC_4th: Button = findViewById(R.id.button_c_4th)
+        buttonC_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["C 4th"] ?: R.raw.c_4th)
+            playNote()
+        }
+
+        //4th string C#
+        val buttonCSharp_4th: Button = findViewById(R.id.button_c_sharp_4th)
+        buttonCSharp_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["C# 4th"] ?: R.raw.c_sharp_4th)
+            playNote()
+        }
+
+        //4th string C#
+        val buttonD_4th: Button = findViewById(R.id.button_d_4th)
+        buttonD_4th.setOnClickListener {
+            setupMediaPlayer(notesMap["D 4th"] ?: R.raw.d_4th)
+            playNote()
+        }
     }
 
     private fun getNotesForScale(scale: String): Map<String, Int> {
