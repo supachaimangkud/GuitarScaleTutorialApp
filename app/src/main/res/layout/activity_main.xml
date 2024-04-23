@@ -110,7 +110,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="E" />
+                    android:text="D" />
 
                 <!--11th fret-->
                 <Button
@@ -126,7 +126,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="D" />
+                    android:text="E" />
 
 
             </LinearLayout>
@@ -668,7 +668,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="E" />
+                    android:text="D" />
 
                 <!--11th fret-->
                 <Button
@@ -684,7 +684,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="D" />
+                    android:text="E" />
             </LinearLayout>
 
 
