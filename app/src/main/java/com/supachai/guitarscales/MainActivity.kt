@@ -517,6 +517,65 @@ class MainActivity : AppCompatActivity() {
             setupMediaPlayer(notesMap["G# 1st"] ?: R.raw.g_sharp_1st)
             playNote()
         }
+
+        //1st string A
+        val buttonA_1st: Button = findViewById(R.id.button_a_1st)
+        buttonA_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["A 1st"] ?: R.raw.a_1st)
+            playNote()
+        }
+
+        //1st string A#
+        val buttonASharp_1st: Button = findViewById(R.id.button_a_sharp_1st)
+        buttonASharp_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["A# 1st"] ?: R.raw.a_sharp_1st)
+            playNote()
+        }
+
+        //1st string B
+        val buttonB_1st: Button = findViewById(R.id.button_b_1st)
+        buttonB_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["B 1st"] ?: R.raw.b_1st)
+            playNote()
+        }
+
+        //1st string C
+        val buttonC_1st: Button = findViewById(R.id.button_c_1st)
+        buttonC_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["C 1st"] ?: R.raw.c_1st)
+            playNote()
+        }
+
+        //1st string C#
+        val buttonCSharp_1st: Button = findViewById(R.id.button_c_sharp_1st)
+        buttonCSharp_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["C# 1st"] ?: R.raw.c_sharp_1st)
+            playNote()
+        }
+
+        //1st string D
+        val buttonD_1st: Button = findViewById(R.id.button_d_1st)
+        buttonD_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["D 1st"] ?: R.raw.d_1st)
+            playNote()
+        }
+
+        //1st string D#
+        val buttonDSharp_1st: Button = findViewById(R.id.button_d_sharp_1st)
+        buttonDSharp_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["D# 1st"] ?: R.raw.d_sharp_1st)
+            playNote()
+        }
+
+        //1st string E
+        val buttonE_1st: Button = findViewById(R.id.button_e_1st)
+        buttonE_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["E 1st"] ?: R.raw.e_1st)
+            playNote()
+        }
+
+
+
     }
 
     private fun getNotesForScale(scale: String): Map<String, Int> {
