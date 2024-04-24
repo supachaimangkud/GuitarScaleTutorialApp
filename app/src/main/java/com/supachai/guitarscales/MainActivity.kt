@@ -393,8 +393,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         //2nd string B Open String
-        val buttonB_2nd: Button = findViewById(R.id.button_b_2nd_open)
-        buttonB_2nd.setOnClickListener {
+        val buttonBOpen_2nd: Button = findViewById(R.id.button_b_2nd_open)
+        buttonBOpen_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["B 2nd Open"] ?: R.raw.b_2nd_open)
             playNote()
         }
@@ -417,6 +417,69 @@ class MainActivity : AppCompatActivity() {
         val buttonD_2nd: Button = findViewById(R.id.button_d_2nd)
         buttonD_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["D 2nd"] ?: R.raw.d_2nd)
+            playNote()
+        }
+
+        //2nd string D#
+        val buttonDSharp_2nd: Button = findViewById(R.id.button_d_sharp_2nd)
+        buttonDSharp_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["D# 2nd"] ?: R.raw.d_sharp_2nd)
+            playNote()
+        }
+
+        //2nd string E
+        val buttonE_2nd: Button = findViewById(R.id.button_e_2nd)
+        buttonE_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["D# 2nd"] ?: R.raw.e_2nd)
+            playNote()
+        }
+
+        //2nd string F
+        val buttonF_2nd: Button = findViewById(R.id.button_f_2nd)
+        buttonF_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["F 2nd"] ?: R.raw.f_2nd)
+            playNote()
+        }
+
+        //2nd string F#
+        val buttonFSharp_2nd: Button = findViewById(R.id.button_f_sharp_2nd)
+        buttonFSharp_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["F# 2nd"] ?: R.raw.f_sharp_2nd)
+            playNote()
+        }
+
+        //2nd string G
+        val buttonG_2nd: Button = findViewById(R.id.button_g_2nd)
+        buttonG_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["G 2nd"] ?: R.raw.g_2nd)
+            playNote()
+        }
+
+        //2nd string G#
+        val buttonGSharp_2nd: Button = findViewById(R.id.button_g_sharp_2nd)
+        buttonGSharp_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["G# 2nd"] ?: R.raw.g_sharp_2nd)
+            playNote()
+        }
+
+        //2nd string A
+        val buttonA_2nd: Button = findViewById(R.id.button_a_2nd)
+        buttonA_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["A 2nd"] ?: R.raw.a_2nd)
+            playNote()
+        }
+
+        //2nd string A#
+        val buttonASharp_2nd: Button = findViewById(R.id.button_a_sharp_2nd)
+        buttonASharp_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["A# 2nd"] ?: R.raw.a_sharp_2nd)
+            playNote()
+        }
+
+        //2nd string B
+        val buttonB_2nd: Button = findViewById(R.id.button_b_2nd)
+        buttonB_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["B 2nd"] ?: R.raw.b_2nd)
             playNote()
         }
     }
