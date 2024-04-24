@@ -392,8 +392,33 @@ class MainActivity : AppCompatActivity() {
             playNote()
         }
 
+        //2nd string B Open String
+        val buttonB_2nd: Button = findViewById(R.id.button_b_2nd_open)
+        buttonB_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["B 2nd Open"] ?: R.raw.b_2nd_open)
+            playNote()
+        }
 
+        //2nd string C
+        val buttonC_2nd: Button = findViewById(R.id.button_c_2nd)
+        buttonC_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["C 2nd"] ?: R.raw.c_2nd)
+            playNote()
+        }
 
+        //2nd string C#
+        val buttonCSharp_2nd: Button = findViewById(R.id.button_c_sharp_2nd)
+        buttonCSharp_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["C# 2nd"] ?: R.raw.c_sharp_2nd)
+            playNote()
+        }
+
+        //2nd string D
+        val buttonD_2nd: Button = findViewById(R.id.button_d_2nd)
+        buttonD_2nd.setOnClickListener {
+            setupMediaPlayer(notesMap["D 2nd"] ?: R.raw.d_2nd)
+            playNote()
+        }
     }
 
     private fun getNotesForScale(scale: String): Map<String, Int> {
