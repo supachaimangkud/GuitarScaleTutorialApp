@@ -579,21 +579,77 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getNotesForScale(scale: String): Map<String, Int> {
-        // Return a map of note labels to raw resource IDs
         return when (scale) {
-            "Major" -> mapOf("E open" to R.raw.e_6th_open, "F" to R.raw.f_6th,
-                "F#" to R.raw.f_sharp_6th, "G" to R.raw.g_6th, "G#" to R.raw.g_sharp_6th,
-                "A" to R.raw.a_6th, "B" to R.raw.b_6th, "C" to R.raw.c_6th, "C#" to R.raw.c_sharp_6th,
-                "D" to R.raw.d_6th, "D#" to R.raw.d_sharp_6th, "E" to R.raw.e_6th)
+            "C Major Scale" -> mapOf(
+                "E 6th Open" to R.raw.e_6th_open,
+                "F 6th" to R.raw.f_6th,
+                "G 6th" to R.raw.g_6th,
+                "C 5th" to R.raw.c_5th,
+                "D 4th" to R.raw.d_4th,
+                "E 4th" to R.raw.e_4th,
+                "F 4th" to R.raw.f_4th,
+                "G 3rd Open" to R.raw.g_3rd_open,
+                "A 4th" to R.raw.a_4th,
+                "B 2nd Open" to R.raw.b_2nd_open,
+                "C 2nd" to R.raw.b_2nd,
+                "D 2nd" to R.raw.d_2nd,
+                "E 2nd" to R.raw.e_6th_open,
+                "F 1st Open" to R.raw.f_6th,
+                "G 1st" to R.raw.g_1st
+
+            )
+            "A Minor Pentatonic" -> mapOf(
+                "E 6th Open" to R.raw.e_6th_open,
+                "G 6th" to R.raw.g_6th,
+                "A 5th" to R.raw.a_5th_open,
+                "C 5th" to R.raw.c_5th,
+                "D 5th" to R.raw.d_5th,
+                "E 4th" to R.raw.e_4th,
+                "G 3rd Open" to R.raw.g_3rd_open,
+                "A 3rd" to R.raw.a_3rd,
+                "C 2nd" to R.raw.c_2nd,
+                "D 2nd" to R.raw.d_2nd,
+                "E 1st Open" to R.raw.e_6th_open,
+                "G 1st" to R.raw.g_1st
+            )
+            "G Major Scale" -> mapOf(
+                "G 6th" to R.raw.g_6th,
+                "A 5th" to R.raw.a_5th_open,
+                "B 5th" to R.raw.b_5th,
+                "C 5th" to R.raw.c_5th,
+                "D 4th" to R.raw.d_4th,
+                "E 4th" to R.raw.e_4th,
+                "F# 4th" to R.raw.f_sharp_4th,
+                "G 3rd Open" to R.raw.e_6th_open,
+                "A 3rd" to R.raw.a_3rd,
+                "B 2nd Open" to R.raw.b_2nd_open,
+                "C 2nd" to R.raw.c_2nd,
+                "D 2nd" to R.raw.d_2nd,
+                "E 1st Open" to R.raw.e_1st_open,
+                "F# 1st" to R.raw.f_sharp_1st
+            )
+            "E Minor Pentatonic" -> mapOf(
+                "E 6th Open" to R.raw.e_6th_open,
+                "G 6th" to R.raw.g_6th,
+                "A 5th Open" to R.raw.a_5th_open,
+                "B 5th" to R.raw.b_5th,
+                "D 4th Open" to R.raw.d_4th_open,
+                "E 4th" to R.raw.e_4th,
+                "G 3rd Open" to R.raw.g_3rd_open,
+                "A 3rd" to R.raw.a_3rd,
+                "B 2nd Open" to R.raw.b_2nd_open,
+                "D 2nd" to R.raw.d_2nd,
+                "E 1st Open" to R.raw.e_1st_open,
+                "G 1st" to R.raw.g_1st
+            )
             else -> emptyMap()
         }
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        // Existing setup code...
 
         // Setup for Spinner
         val scaleSpinner: Spinner = findViewById(R.id.scaleSpinner)
