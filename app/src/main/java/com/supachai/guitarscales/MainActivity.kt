@@ -567,7 +567,7 @@ class MainActivity : AppCompatActivity() {
             playNote()
         }
 
-        //1st string E
+        //1st string  E
         val buttonE_1st: Button = findViewById(R.id.button_e_1st)
         buttonE_1st.setOnClickListener {
             setupMediaPlayer(notesMap["E 1st"] ?: R.raw.e_1st)
