@@ -381,7 +381,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="D" />
+                    android:text="A" />
 
                 <!--3rd fret-->
                 <Button
@@ -389,7 +389,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="D#" />
+                    android:text="A#" />
 
                 <!--4th fret-->
                 <Button
@@ -397,7 +397,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="D" />
+                    android:text="B" />
 
                 <!--5th fret-->
                 <Button
@@ -405,7 +405,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="D#" />
+                    android:text="C" />
 
                 <!--6th fret-->
                 <Button
@@ -413,7 +413,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="E" />
+                    android:text="C#" />
 
                 <!--7st fret-->
                 <Button
@@ -421,7 +421,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="E#" />
+                    android:text="D" />
 
                 <!--8th fret-->
                 <Button
@@ -429,7 +429,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="F" />
+                    android:text="D#" />
 
                 <!--9st fret-->
                 <Button
@@ -437,7 +437,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="F#" />
+                    android:text="E" />
 
                 <!--10th fret-->
                 <Button
@@ -445,7 +445,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="G" />
+                    android:text="F" />
 
                 <!--11th fret-->
                 <Button
@@ -453,7 +453,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="G#" />
+                    android:text="F#" />
 
                 <!--12th fret-->
                 <Button
@@ -461,7 +461,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="A" />
+                    android:text="G" />
             </LinearLayout>
 
             <!--2th string-->

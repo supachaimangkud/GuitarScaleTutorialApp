@@ -307,6 +307,93 @@ class MainActivity : AppCompatActivity() {
             setupMediaPlayer(notesMap["G 3rd Open"] ?: R.raw.g_3rd_open)
             playNote()
         }
+
+        //3rd string G#
+        val buttonGSharp_3rd: Button = findViewById(R.id.button_g_sharp_3rd)
+        buttonGSharp_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["G# 3rd"] ?: R.raw.g_sharp_3rd)
+            playNote()
+        }
+
+        //3rd string A
+        val buttonA_3rd: Button = findViewById(R.id.button_a_3rd)
+        buttonA_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["A 3rd"] ?: R.raw.a_3rd)
+            playNote()
+        }
+
+        //3rd string A#
+        val buttonASharp_3rd: Button = findViewById(R.id.button_a_sharp_3rd)
+        buttonASharp_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["A# 3rd"] ?: R.raw.a_sharp_3rd)
+            playNote()
+        }
+
+        //3rd string B
+        val buttonB_3rd: Button = findViewById(R.id.button_b_3rd)
+        buttonB_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["B 3rd"] ?: R.raw.b_3rd)
+            playNote()
+        }
+
+        //3rd string C
+        val buttonC_3rd: Button = findViewById(R.id.button_c_3rd)
+        buttonC_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["C 3rd"] ?: R.raw.c_3rd)
+            playNote()
+        }
+
+        //3rd string C#
+        val buttonCSharp_3rd: Button = findViewById(R.id.button_c_sharp_3rd)
+        buttonCSharp_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["C# 3rd"] ?: R.raw.c_sharp_3rd)
+            playNote()
+        }
+
+        //3rd string D
+        val buttonD_3rd: Button = findViewById(R.id.button_d_3rd)
+        buttonD_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["D 3rd"] ?: R.raw.d_3rd)
+            playNote()
+        }
+
+        //3rd string D#
+        val buttonDSharp_3rd: Button = findViewById(R.id.button_d_sharp_3rd)
+        buttonDSharp_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["D# 3rd"] ?: R.raw.d_sharp_3rd)
+            playNote()
+        }
+
+        //3rd string E
+        val buttonE_3rd: Button = findViewById(R.id.button_e_3rd)
+        buttonE_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["E 3rd"] ?: R.raw.e_3rd)
+            playNote()
+        }
+
+        //3rd string F
+        val buttonF_3rd: Button = findViewById(R.id.button_f_3rd)
+        buttonF_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["F 3rd"] ?: R.raw.f_3rd)
+            playNote()
+        }
+
+        //3rd string F#
+        val buttonFSharp_3rd: Button = findViewById(R.id.button_f_sharp_3rd)
+        buttonFSharp_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["F# 3rd"] ?: R.raw.f_sharp_3rd)
+            playNote()
+        }
+
+        //3rd string G
+        val buttonG_3rd: Button = findViewById(R.id.button_g_3rd)
+        buttonG_3rd.setOnClickListener {
+            setupMediaPlayer(notesMap["F# 3rd"] ?: R.raw.g_3rd)
+            playNote()
+        }
+
+
+
     }
 
     private fun getNotesForScale(scale: String): Map<String, Int> {
