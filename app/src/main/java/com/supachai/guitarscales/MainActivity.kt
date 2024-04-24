@@ -482,6 +482,41 @@ class MainActivity : AppCompatActivity() {
             setupMediaPlayer(notesMap["B 2nd"] ?: R.raw.b_2nd)
             playNote()
         }
+
+        //1st string E Open
+        val buttonEOpen_1st: Button = findViewById(R.id.button_e_1st_open)
+        buttonEOpen_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["E 1st Open"] ?: R.raw.e_1st_open)
+            playNote()
+        }
+
+        //1st string F
+        val buttonF_1st: Button = findViewById(R.id.button_f_1st)
+        buttonF_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["F 1st"] ?: R.raw.f_1st)
+            playNote()
+        }
+
+        //1st string F#
+        val buttonFSharp_1st: Button = findViewById(R.id.button_f_sharp_1st)
+        buttonFSharp_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["F# 1st"] ?: R.raw.f_sharp_1st)
+            playNote()
+        }
+
+        //1st string G
+        val buttonG_1st: Button = findViewById(R.id.button_g_1st)
+        buttonG_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["G 1st"] ?: R.raw.g_1st)
+            playNote()
+        }
+
+        //1st string G#
+        val buttonGSharp_1st: Button = findViewById(R.id.button_g_sharp_1st)
+        buttonGSharp_1st.setOnClickListener {
+            setupMediaPlayer(notesMap["G# 1st"] ?: R.raw.g_sharp_1st)
+            playNote()
+        }
     }
 
     private fun getNotesForScale(scale: String): Map<String, Int> {
