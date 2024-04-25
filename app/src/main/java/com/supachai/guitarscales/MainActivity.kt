@@ -12,6 +12,9 @@ import android.widget.Button
 class MainActivity : AppCompatActivity() {
 
     private var mediaPlayer: MediaPlayer? = null
+    private var notesPlayed = mutableListOf<String>()  // List to keep track of played notes
+
+
 
     private fun setupMediaPlayer(noteResourceId: Int) {
         mediaPlayer?.release() // Release any previously playing player
@@ -32,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         buttonEOpen_6th.setOnClickListener {
             setupMediaPlayer(notesMap["E 6th open"] ?: R.raw.e_6th_open)
             playNote()
+            notesPlayed.add("E 6th open")  // Record the note played
         }
 
         //6th String F
@@ -39,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         buttonF_6th.setOnClickListener {
             setupMediaPlayer(notesMap["F 6th"] ?: R.raw.f_6th)
             playNote()
+            notesPlayed.add("F 6th")  // Record the note played
         }
 
         //6th String F#
@@ -46,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         buttonFSharp_6th.setOnClickListener {
             setupMediaPlayer(notesMap["F# 6th"] ?: R.raw.f_sharp_6th)
             playNote()
+            notesPlayed.add("F# 6th")  // Record the note played
         }
 
         //6th String G
@@ -53,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         buttonG_6th.setOnClickListener {
             setupMediaPlayer(notesMap["G 6th"] ?: R.raw.g_6th)
             playNote()
+            notesPlayed.add("G 6th")  // Record the note played
         }
 
         //6th String G#
@@ -60,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         buttonGSharp_6th.setOnClickListener {
             setupMediaPlayer(notesMap["G# 6th"] ?: R.raw.g_sharp_6th)
             playNote()
+            notesPlayed.add("G# 6th")  // Record the note played
         }
 
         //6th String A
@@ -67,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         buttonA_6th.setOnClickListener {
             setupMediaPlayer(notesMap["A 6th"] ?: R.raw.a_6th)
             playNote()
+            notesPlayed.add("A 6th")  // Record the note played
         }
 
         //6th String A#
@@ -74,6 +83,7 @@ class MainActivity : AppCompatActivity() {
         buttonASharp_6th.setOnClickListener {
             setupMediaPlayer(notesMap["A# 6th"] ?: R.raw.a_sharp_6th)
             playNote()
+            notesPlayed.add("A# 6th")  // Record the note played
         }
 
         //6th String B
@@ -81,6 +91,7 @@ class MainActivity : AppCompatActivity() {
         buttonB_6th.setOnClickListener {
             setupMediaPlayer(notesMap["B 6th"] ?: R.raw.b_6th)
             playNote()
+            notesPlayed.add("B 6th")  // Record the note played
         }
 
         //6th String C
@@ -88,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         buttonC_6th.setOnClickListener {
             setupMediaPlayer(notesMap["C 6th"] ?: R.raw.c_6th)
             playNote()
+            notesPlayed.add("C 6th")  // Record the note played
         }
 
         //6th String C#
@@ -95,6 +107,7 @@ class MainActivity : AppCompatActivity() {
         buttonCSharp_6th.setOnClickListener {
             setupMediaPlayer(notesMap["C# 6th"] ?: R.raw.c_sharp_6th)
             playNote()
+            notesPlayed.add("C# 6th")  // Record the note played
         }
 
         //6th String D
@@ -103,12 +116,14 @@ class MainActivity : AppCompatActivity() {
             setupMediaPlayer(notesMap["D 6th"] ?: R.raw.d_6th)
             playNote()
         }
+        notesPlayed.add("D 6th")  // Record the note played
 
         //6th String D#
         val buttonDSharp_6th: Button = findViewById(R.id.button_d_sharp_6th)
         buttonDSharp_6th.setOnClickListener {
             setupMediaPlayer(notesMap["D# 6th"] ?: R.raw.d_sharp_6th)
             playNote()
+            notesPlayed.add("D# 6th")  // Record the note played
         }
 
         //6th String E
@@ -116,6 +131,7 @@ class MainActivity : AppCompatActivity() {
         buttonE_6th.setOnClickListener {
             setupMediaPlayer(notesMap["D 6th"] ?: R.raw.e_6th)
             playNote()
+            notesPlayed.add("E 6th")  // Record the note played
         }
 
         //5th String A Open
@@ -123,6 +139,7 @@ class MainActivity : AppCompatActivity() {
         buttonAOpen_5th.setOnClickListener {
             setupMediaPlayer(notesMap["A 5th Open"] ?: R.raw.a_5th_open)
             playNote()
+            notesPlayed.add("A 6th Open")  // Record the note played
         }
 
         //5th String A#
@@ -130,6 +147,7 @@ class MainActivity : AppCompatActivity() {
         buttonASharp_5th.setOnClickListener {
             setupMediaPlayer(notesMap["A# 5th"] ?: R.raw.a_sharp_5th)
             playNote()
+            notesPlayed.add("A# 5th")  // Record the note played
         }
 
         //5th String B
@@ -137,6 +155,7 @@ class MainActivity : AppCompatActivity() {
         buttonB_5th.setOnClickListener {
             setupMediaPlayer(notesMap["B 5th"] ?: R.raw.b_5th)
             playNote()
+            notesPlayed.add("B 5th")  // Record the note played
         }
 
         //5th String C
@@ -144,6 +163,7 @@ class MainActivity : AppCompatActivity() {
         buttonC_5th.setOnClickListener {
             setupMediaPlayer(notesMap["C 5th"] ?: R.raw.c_5th)
             playNote()
+            notesPlayed.add("C 5th")  // Record the note played
         }
 
         //5th String C#
@@ -151,6 +171,7 @@ class MainActivity : AppCompatActivity() {
         buttonCSharp_5th.setOnClickListener {
             setupMediaPlayer(notesMap["C# 5th"] ?: R.raw.c_sharp_5th)
             playNote()
+            notesPlayed.add("C# 5th")  // Record the note played
         }
 
         //5th String D
@@ -158,6 +179,7 @@ class MainActivity : AppCompatActivity() {
         buttonD_5th.setOnClickListener {
             setupMediaPlayer(notesMap["D 5th"] ?: R.raw.d_5th)
             playNote()
+            notesPlayed.add("D 5th")  // Record the note played
         }
 
         //5th String D#
@@ -165,6 +187,7 @@ class MainActivity : AppCompatActivity() {
         buttonDSharp_5th.setOnClickListener {
             setupMediaPlayer(notesMap["D# 5th"] ?: R.raw.d_sharp_5th)
             playNote()
+            notesPlayed.add("D# 5th")  // Record the note played
         }
 
         //5th String E
@@ -172,6 +195,7 @@ class MainActivity : AppCompatActivity() {
         buttonE_5th.setOnClickListener {
             setupMediaPlayer(notesMap["E 5th"] ?: R.raw.e_5th)
             playNote()
+            notesPlayed.add("E 5th")  // Record the note played
         }
 
         //5th String F
@@ -179,6 +203,7 @@ class MainActivity : AppCompatActivity() {
         buttonF_5th.setOnClickListener {
             setupMediaPlayer(notesMap["F 5th"] ?: R.raw.f_5th)
             playNote()
+            notesPlayed.add("F 5th")  // Record the note played
         }
 
         //5th String F#
@@ -186,6 +211,7 @@ class MainActivity : AppCompatActivity() {
         buttonFSharp_5th.setOnClickListener {
             setupMediaPlayer(notesMap["F# 5th"] ?: R.raw.f_sharp_5th)
             playNote()
+            notesPlayed.add("F# 5th")  // Record the note played
         }
 
         //5th string G
@@ -193,6 +219,7 @@ class MainActivity : AppCompatActivity() {
         buttonG_5th.setOnClickListener {
             setupMediaPlayer(notesMap["G 5th"] ?: R.raw.g_5th)
             playNote()
+            notesPlayed.add("G 5th")  // Record the note played
         }
 
         //5th string G#
@@ -200,6 +227,7 @@ class MainActivity : AppCompatActivity() {
         buttonGSharp_5th.setOnClickListener {
             setupMediaPlayer(notesMap["G# 5th"] ?: R.raw.g_sharp_5th)
             playNote()
+            notesPlayed.add("G# 5th")  // Record the note played
         }
 
         //5th string A
@@ -207,6 +235,7 @@ class MainActivity : AppCompatActivity() {
         buttonA_5th.setOnClickListener {
             setupMediaPlayer(notesMap["A 5th"] ?: R.raw.a_5th)
             playNote()
+            notesPlayed.add("A 5th")  // Record the note played
         }
 
 
@@ -215,6 +244,7 @@ class MainActivity : AppCompatActivity() {
         buttonDOpen_4th.setOnClickListener {
             setupMediaPlayer(notesMap["D 4th Open"] ?: R.raw.d_4th_open)
             playNote()
+            notesPlayed.add("D 4th Open")  // Record the note played
         }
 
         //4th string D#
@@ -222,6 +252,7 @@ class MainActivity : AppCompatActivity() {
         buttonDSharp_4th.setOnClickListener {
             setupMediaPlayer(notesMap["D# 4th"] ?: R.raw.d_sharp_4th)
             playNote()
+            notesPlayed.add("D# 4th")  // Record the note played
         }
 
         //4th string E
@@ -229,6 +260,7 @@ class MainActivity : AppCompatActivity() {
         buttonE_4th.setOnClickListener {
             setupMediaPlayer(notesMap["E 4th"] ?: R.raw.e_4th)
             playNote()
+            notesPlayed.add("E 4th")  // Record the note played
         }
 
         //4th string F
@@ -236,6 +268,7 @@ class MainActivity : AppCompatActivity() {
         buttonF_4th.setOnClickListener {
             setupMediaPlayer(notesMap["F 4th"] ?: R.raw.f_4th)
             playNote()
+            notesPlayed.add("F 4th")  // Record the note played
         }
 
         //4th string F sharp
@@ -243,6 +276,7 @@ class MainActivity : AppCompatActivity() {
         buttonFSharp_4th.setOnClickListener {
             setupMediaPlayer(notesMap["F# 4th"] ?: R.raw.f_sharp_4th)
             playNote()
+            notesPlayed.add("F# 4th")  // Record the note played
         }
 
         //4th string G
@@ -250,6 +284,7 @@ class MainActivity : AppCompatActivity() {
         buttonG_4th.setOnClickListener {
             setupMediaPlayer(notesMap["G 4th"] ?: R.raw.g_4th)
             playNote()
+            notesPlayed.add("G 4th")  // Record the note played
         }
 
         //4th string G#
@@ -257,6 +292,7 @@ class MainActivity : AppCompatActivity() {
         buttonGSharp_4th.setOnClickListener {
             setupMediaPlayer(notesMap["G# 4th"] ?: R.raw.g_sharp_4th)
             playNote()
+            notesPlayed.add("G# 4th")  // Record the note played
         }
 
         //4th string A
@@ -264,6 +300,7 @@ class MainActivity : AppCompatActivity() {
         buttonA_4th.setOnClickListener {
             setupMediaPlayer(notesMap["A 4th"] ?: R.raw.a_4th)
             playNote()
+            notesPlayed.add("A 4th")  // Record the note played
         }
 
         //4th string A#
@@ -271,6 +308,7 @@ class MainActivity : AppCompatActivity() {
         buttonASharp_4th.setOnClickListener {
             setupMediaPlayer(notesMap["A# 4th"] ?: R.raw.a_sharp_4th)
             playNote()
+            notesPlayed.add("A# 4th")  // Record the note played
         }
 
         //4th string B
@@ -278,6 +316,7 @@ class MainActivity : AppCompatActivity() {
         buttonB_4th.setOnClickListener {
             setupMediaPlayer(notesMap["B 4th"] ?: R.raw.b_4th)
             playNote()
+            notesPlayed.add("B 4th")  // Record the note played
         }
 
         //4th string C
@@ -285,6 +324,7 @@ class MainActivity : AppCompatActivity() {
         buttonC_4th.setOnClickListener {
             setupMediaPlayer(notesMap["C 4th"] ?: R.raw.c_4th)
             playNote()
+            notesPlayed.add("C 4th")  // Record the note played
         }
 
         //4th string C#
@@ -292,6 +332,7 @@ class MainActivity : AppCompatActivity() {
         buttonCSharp_4th.setOnClickListener {
             setupMediaPlayer(notesMap["C# 4th"] ?: R.raw.c_sharp_4th)
             playNote()
+            notesPlayed.add("C# 4th")  // Record the note played
         }
 
         //4th string C#
@@ -299,6 +340,7 @@ class MainActivity : AppCompatActivity() {
         buttonD_4th.setOnClickListener {
             setupMediaPlayer(notesMap["D 4th"] ?: R.raw.d_4th)
             playNote()
+            notesPlayed.add("C# 4th")  // Record the note played
         }
 
         //3rd string G open
@@ -306,6 +348,7 @@ class MainActivity : AppCompatActivity() {
         buttonGOpen_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["G 3rd Open"] ?: R.raw.g_3rd_open)
             playNote()
+            notesPlayed.add("G 3rd Open")  // Record the note played
         }
 
         //3rd string G#
@@ -313,6 +356,7 @@ class MainActivity : AppCompatActivity() {
         buttonGSharp_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["G# 3rd"] ?: R.raw.g_sharp_3rd)
             playNote()
+            notesPlayed.add("G# 4th")  // Record the note played
         }
 
         //3rd string A
@@ -320,6 +364,7 @@ class MainActivity : AppCompatActivity() {
         buttonA_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["A 3rd"] ?: R.raw.a_3rd)
             playNote()
+            notesPlayed.add("A 3rd")  // Record the note played
         }
 
         //3rd string A#
@@ -327,6 +372,7 @@ class MainActivity : AppCompatActivity() {
         buttonASharp_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["A# 3rd"] ?: R.raw.a_sharp_3rd)
             playNote()
+            notesPlayed.add("A# 3rd")  // Record the note played
         }
 
         //3rd string B
@@ -334,6 +380,7 @@ class MainActivity : AppCompatActivity() {
         buttonB_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["B 3rd"] ?: R.raw.b_3rd)
             playNote()
+            notesPlayed.add("B 3rd")  // Record the note played
         }
 
         //3rd string C
@@ -341,6 +388,7 @@ class MainActivity : AppCompatActivity() {
         buttonC_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["C 3rd"] ?: R.raw.c_3rd)
             playNote()
+            notesPlayed.add("C 3rd")  // Record the note played
         }
 
         //3rd string C#
@@ -348,6 +396,7 @@ class MainActivity : AppCompatActivity() {
         buttonCSharp_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["C# 3rd"] ?: R.raw.c_sharp_3rd)
             playNote()
+            notesPlayed.add("C# 3rd")  // Record the note played
         }
 
         //3rd string D
@@ -355,6 +404,7 @@ class MainActivity : AppCompatActivity() {
         buttonD_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["D 3rd"] ?: R.raw.d_3rd)
             playNote()
+            notesPlayed.add("D 3rd")  // Record the note played
         }
 
         //3rd string D#
@@ -362,6 +412,7 @@ class MainActivity : AppCompatActivity() {
         buttonDSharp_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["D# 3rd"] ?: R.raw.d_sharp_3rd)
             playNote()
+            notesPlayed.add("D# 3rd")  // Record the note played
         }
 
         //3rd string E
@@ -369,6 +420,7 @@ class MainActivity : AppCompatActivity() {
         buttonE_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["E 3rd"] ?: R.raw.e_3rd)
             playNote()
+            notesPlayed.add("E 3rd")  // Record the note played
         }
 
         //3rd string F
@@ -376,6 +428,7 @@ class MainActivity : AppCompatActivity() {
         buttonF_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["F 3rd"] ?: R.raw.f_3rd)
             playNote()
+            notesPlayed.add("F 3rd")  // Record the note played
         }
 
         //3rd string F#
@@ -383,6 +436,7 @@ class MainActivity : AppCompatActivity() {
         buttonFSharp_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["F# 3rd"] ?: R.raw.f_sharp_3rd)
             playNote()
+            notesPlayed.add("F# 3rd")  // Record the note played
         }
 
         //3rd string G
@@ -390,6 +444,7 @@ class MainActivity : AppCompatActivity() {
         buttonG_3rd.setOnClickListener {
             setupMediaPlayer(notesMap["F# 3rd"] ?: R.raw.g_3rd)
             playNote()
+            notesPlayed.add("G 3rd")  // Record the note played
         }
 
         //2nd string B Open String
@@ -397,6 +452,7 @@ class MainActivity : AppCompatActivity() {
         buttonBOpen_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["B 2nd Open"] ?: R.raw.b_2nd_open)
             playNote()
+            notesPlayed.add("B 2nd Open")  // Record the note played
         }
 
         //2nd string C
@@ -404,6 +460,7 @@ class MainActivity : AppCompatActivity() {
         buttonC_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["C 2nd"] ?: R.raw.c_2nd)
             playNote()
+            notesPlayed.add("C 2nd")  // Record the note played
         }
 
         //2nd string C#
@@ -411,6 +468,7 @@ class MainActivity : AppCompatActivity() {
         buttonCSharp_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["C# 2nd"] ?: R.raw.c_sharp_2nd)
             playNote()
+            notesPlayed.add("C# 2nd")  // Record the note played
         }
 
         //2nd string D
@@ -418,6 +476,7 @@ class MainActivity : AppCompatActivity() {
         buttonD_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["D 2nd"] ?: R.raw.d_2nd)
             playNote()
+            notesPlayed.add("D 2nd")  // Record the note played
         }
 
         //2nd string D#
@@ -425,6 +484,7 @@ class MainActivity : AppCompatActivity() {
         buttonDSharp_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["D# 2nd"] ?: R.raw.d_sharp_2nd)
             playNote()
+            notesPlayed.add("D# 2nd")  // Record the note played
         }
 
         //2nd string E
@@ -432,6 +492,7 @@ class MainActivity : AppCompatActivity() {
         buttonE_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["D# 2nd"] ?: R.raw.e_2nd)
             playNote()
+            notesPlayed.add("E 2nd")  // Record the note played
         }
 
         //2nd string F
@@ -439,6 +500,7 @@ class MainActivity : AppCompatActivity() {
         buttonF_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["F 2nd"] ?: R.raw.f_2nd)
             playNote()
+            notesPlayed.add("F 2nd")  // Record the note played
         }
 
         //2nd string F#
@@ -446,6 +508,7 @@ class MainActivity : AppCompatActivity() {
         buttonFSharp_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["F# 2nd"] ?: R.raw.f_sharp_2nd)
             playNote()
+            notesPlayed.add("F# 2nd")  // Record the note played
         }
 
         //2nd string G
@@ -453,6 +516,7 @@ class MainActivity : AppCompatActivity() {
         buttonG_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["G 2nd"] ?: R.raw.g_2nd)
             playNote()
+            notesPlayed.add("G 2nd")  // Record the note played
         }
 
         //2nd string G#
@@ -460,6 +524,7 @@ class MainActivity : AppCompatActivity() {
         buttonGSharp_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["G# 2nd"] ?: R.raw.g_sharp_2nd)
             playNote()
+            notesPlayed.add("G# 2nd")  // Record the note played
         }
 
         //2nd string A
@@ -467,6 +532,7 @@ class MainActivity : AppCompatActivity() {
         buttonA_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["A 2nd"] ?: R.raw.a_2nd)
             playNote()
+            notesPlayed.add("A 2nd")  // Record the note played
         }
 
         //2nd string A#
@@ -474,6 +540,7 @@ class MainActivity : AppCompatActivity() {
         buttonASharp_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["A# 2nd"] ?: R.raw.a_sharp_2nd)
             playNote()
+            notesPlayed.add("A# 2nd")  // Record the note played
         }
 
         //2nd string B
@@ -481,6 +548,7 @@ class MainActivity : AppCompatActivity() {
         buttonB_2nd.setOnClickListener {
             setupMediaPlayer(notesMap["B 2nd"] ?: R.raw.b_2nd)
             playNote()
+            notesPlayed.add("B 2nd")  // Record the note played
         }
 
         //1st string E Open
@@ -488,6 +556,7 @@ class MainActivity : AppCompatActivity() {
         buttonEOpen_1st.setOnClickListener {
             setupMediaPlayer(notesMap["E 1st Open"] ?: R.raw.e_1st_open)
             playNote()
+            notesPlayed.add("E 1st Open")  // Record the note played
         }
 
         //1st string F
@@ -495,6 +564,7 @@ class MainActivity : AppCompatActivity() {
         buttonF_1st.setOnClickListener {
             setupMediaPlayer(notesMap["F 1st"] ?: R.raw.f_1st)
             playNote()
+            notesPlayed.add("F 1st")  // Record the note played
         }
 
         //1st string F#
@@ -502,6 +572,7 @@ class MainActivity : AppCompatActivity() {
         buttonFSharp_1st.setOnClickListener {
             setupMediaPlayer(notesMap["F# 1st"] ?: R.raw.f_sharp_1st)
             playNote()
+            notesPlayed.add("F# 1st")  // Record the note played
         }
 
         //1st string G
@@ -509,6 +580,7 @@ class MainActivity : AppCompatActivity() {
         buttonG_1st.setOnClickListener {
             setupMediaPlayer(notesMap["G 1st"] ?: R.raw.g_1st)
             playNote()
+            notesPlayed.add("G 1st")  // Record the note played
         }
 
         //1st string G#
@@ -516,6 +588,7 @@ class MainActivity : AppCompatActivity() {
         buttonGSharp_1st.setOnClickListener {
             setupMediaPlayer(notesMap["G# 1st"] ?: R.raw.g_sharp_1st)
             playNote()
+            notesPlayed.add("G# 1st")  // Record the note played
         }
 
         //1st string A
@@ -523,6 +596,7 @@ class MainActivity : AppCompatActivity() {
         buttonA_1st.setOnClickListener {
             setupMediaPlayer(notesMap["A 1st"] ?: R.raw.a_1st)
             playNote()
+            notesPlayed.add("A 1st")  // Record the note played
         }
 
         //1st string A#
@@ -530,6 +604,7 @@ class MainActivity : AppCompatActivity() {
         buttonASharp_1st.setOnClickListener {
             setupMediaPlayer(notesMap["A# 1st"] ?: R.raw.a_sharp_1st)
             playNote()
+            notesPlayed.add("A# 1st")  // Record the note played
         }
 
         //1st string B
@@ -537,6 +612,7 @@ class MainActivity : AppCompatActivity() {
         buttonB_1st.setOnClickListener {
             setupMediaPlayer(notesMap["B 1st"] ?: R.raw.b_1st)
             playNote()
+            notesPlayed.add("B 1st")  // Record the note played
         }
 
         //1st string C
@@ -544,6 +620,7 @@ class MainActivity : AppCompatActivity() {
         buttonC_1st.setOnClickListener {
             setupMediaPlayer(notesMap["C 1st"] ?: R.raw.c_1st)
             playNote()
+            notesPlayed.add("C 1st")  // Record the note played
         }
 
         //1st string C#
@@ -551,6 +628,7 @@ class MainActivity : AppCompatActivity() {
         buttonCSharp_1st.setOnClickListener {
             setupMediaPlayer(notesMap["C# 1st"] ?: R.raw.c_sharp_1st)
             playNote()
+            notesPlayed.add("C# 1st")  // Record the note played
         }
 
         //1st string D
@@ -558,6 +636,7 @@ class MainActivity : AppCompatActivity() {
         buttonD_1st.setOnClickListener {
             setupMediaPlayer(notesMap["D 1st"] ?: R.raw.d_1st)
             playNote()
+            notesPlayed.add("D 1st")  // Record the note played
         }
 
         //1st string D#
@@ -565,6 +644,7 @@ class MainActivity : AppCompatActivity() {
         buttonDSharp_1st.setOnClickListener {
             setupMediaPlayer(notesMap["D# 1st"] ?: R.raw.d_sharp_1st)
             playNote()
+            notesPlayed.add("D# 1st")  // Record the note played
         }
 
         //1st string E
@@ -572,9 +652,8 @@ class MainActivity : AppCompatActivity() {
         buttonE_1st.setOnClickListener {
             setupMediaPlayer(notesMap["E 1st"] ?: R.raw.e_1st)
             playNote()
+            notesPlayed.add("E 1st")  // Record the note played
         }
-
-
 
     }
 
@@ -591,7 +670,7 @@ class MainActivity : AppCompatActivity() {
                 "G 3rd Open" to R.raw.g_3rd_open,
                 "A 4th" to R.raw.a_4th,
                 "B 2nd Open" to R.raw.b_2nd_open,
-                "C 2nd" to R.raw.b_2nd,
+                "C 2nd" to R.raw.c_2nd,
                 "D 2nd" to R.raw.d_2nd,
                 "E 2nd" to R.raw.e_6th_open,
                 "F 1st Open" to R.raw.f_6th,
