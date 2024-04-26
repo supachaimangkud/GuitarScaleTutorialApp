@@ -1,19 +1,41 @@
 package com.supachai.guitarscales
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
-import android.view.View
 import android.widget.AdapterView
 import android.media.MediaPlayer
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AlertDialog
+import android.view.View
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
     private var mediaPlayer: MediaPlayer? = null
     private var notesPlayed = mutableListOf<String>()  // List to keep track of played notes
+    private lateinit var currentScale: String
+    private val correctSequences: Map<String, List<String>> = mapOf(
+        "C Major Scale" to listOf("C 5th","D 4th Open","E 4th","F 4th","G 3rd Open","A 3rd",
+            "B 2nd Open", "C 2nd","D 2nd","E 1st Open", "F 1st", "G 1st", "F 1st", "E 1st Open",
+            "D 2nd","C 2nd","B 2nd Open", "A 3rd", "G 3rd Open", "F 4th", "E 4th", "D 4th Open",
+            "C 5th", "B 5th", "A 5th Open", "G 6th", "F 6th", "E 6th Open", "F 6th", "G 6th",
+            "A 5th Open", "B 5th", "C 5th"),
 
+        "E Minor Pentatonic" to listOf("E 4th", "G 3rd Open", "A 3rd", "B 2nd Open", "D 2nd",
+            "E 1st Open", "G 1st", "E 1st Open", "D 2nd", "B 2nd Open", "A 3rd", "G 3rd Open",
+            "E 4th", "D 4th Open", "B 5th", "A 5th Open", "G 6th", "E 6th Open", "G 6th",
+            "A 5th Open", "C 5th", "D 4th Open", "E 4th"),
+
+        "A Minor Pentatonic" to listOf("A 3rd", "C 2nd","D 2nd", "E 1st Open", "G 1st",
+            "E 1st Open", "D 2nd", "C 2nd", "A 3rd", "G 3rd Open", "E 4th", "D 4th Open", "C 5th",
+            "A 5th Open", "G 6th", "E 6th Open", "G 6th", "A 5th Open", "C 5th", "D 4th Open",
+            "E 4th", "G 3rd Open", "A 3rd")
+        // Add more scales with their correct sequences
+    )
 
 
     private fun setupMediaPlayer(noteResourceId: Int) {
@@ -33,9 +55,9 @@ class MainActivity : AppCompatActivity() {
         //6th String open string
         val buttonEOpen_6th: Button = findViewById(R.id.button_e_6th_open)
         buttonEOpen_6th.setOnClickListener {
-            setupMediaPlayer(notesMap["E 6th open"] ?: R.raw.e_6th_open)
+            setupMediaPlayer(notesMap["E 6th Open"] ?: R.raw.e_6th_open)
             playNote()
-            notesPlayed.add("E 6th open")  // Record the note played
+            notesPlayed.add("E 6th Open")  // Record the note played
         }
 
         //6th String F
@@ -115,8 +137,8 @@ class MainActivity : AppCompatActivity() {
         buttonD_6th.setOnClickListener {
             setupMediaPlayer(notesMap["D 6th"] ?: R.raw.d_6th)
             playNote()
+            notesPlayed.add("D 6th")  // Record the note played
         }
-        notesPlayed.add("D 6th")  // Record the note played
 
         //6th String D#
         val buttonDSharp_6th: Button = findViewById(R.id.button_d_sharp_6th)
@@ -139,7 +161,7 @@ class MainActivity : AppCompatActivity() {
         buttonAOpen_5th.setOnClickListener {
             setupMediaPlayer(notesMap["A 5th Open"] ?: R.raw.a_5th_open)
             playNote()
-            notesPlayed.add("A 6th Open")  // Record the note played
+            notesPlayed.add("A 5th Open")  // Record the note played
         }
 
         //5th String A#
@@ -490,7 +512,7 @@ class MainActivity : AppCompatActivity() {
         //2nd string E
         val buttonE_2nd: Button = findViewById(R.id.button_e_2nd)
         buttonE_2nd.setOnClickListener {
-            setupMediaPlayer(notesMap["D# 2nd"] ?: R.raw.e_2nd)
+            setupMediaPlayer(notesMap["E 2nd"] ?: R.raw.e_2nd)
             playNote()
             notesPlayed.add("E 2nd")  // Record the note played
         }
@@ -657,6 +679,29 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun validateNotesAndShowPopup() {
+        val isCorrect = checkIfScalePlayedCorrectly()
+        if (isCorrect) {
+            showPopup("Correct", "You played the scale correctly!")
+        } else {
+            showPopup("Incorrect", "Try again.")
+        }
+        notesPlayed.clear()
+    }
+
+    private fun checkIfScalePlayedCorrectly(): Boolean {
+        // logic to check the notes
+        return notesPlayed == correctSequences[currentScale]
+    }
+
+    private fun showPopup(title: String, message: String) {
+        AlertDialog.Builder(this)
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveButton("OK") { dialog, which -> dialog.dismiss() }
+            .show()
+    }
+
     private fun getNotesForScale(scale: String): Map<String, Int> {
         return when (scale) {
             "C Major Scale" -> mapOf(
@@ -725,7 +770,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
+    //program start here
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -739,6 +784,12 @@ class MainActivity : AppCompatActivity() {
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             scaleSpinner.adapter = adapter
+        }
+
+        val finishButton: FloatingActionButton = findViewById(R.id.finishButton)
+        finishButton.setOnClickListener {
+            // Call a method that checks if the user played the correct scale
+            validateNotesAndShowPopup()
         }
 
         // Set an item selected listener for the spinner
@@ -756,8 +807,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateScale(scale: String) {
-        // Implement your scale changing logic here
         // This could involve updating the visible notes, changing button labels, etc.
+        currentScale = scale  // Update the current scale
         setupButtonNotes(scale)
     }
 
