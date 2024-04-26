@@ -1,8 +1,6 @@
 package com.supachai.guitarscales
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
@@ -15,9 +13,16 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
+    //use for playing mp3 file that is corresponding to each button
     private var mediaPlayer: MediaPlayer? = null
-    private var notesPlayed = mutableListOf<String>()  // List to keep track of played notes
+
+    // List to keep track of played notes
+    private var notesPlayed = mutableListOf<String>()
+
+    //currentScale will be initialized later base on scale that user has selected
     private lateinit var currentScale: String
+
+    //list of notes that corresponding to each scale
     private val correctSequences: Map<String, List<String>> = mapOf(
         "C Major Scale" to listOf("C 5th","D 4th Open","E 4th","F 4th","G 3rd Open","A 3rd",
             "B 2nd Open", "C 2nd","D 2nd","E 1st Open", "F 1st", "G 1st", "F 1st", "E 1st Open",
@@ -33,11 +38,22 @@ class MainActivity : AppCompatActivity() {
         "A Minor Pentatonic" to listOf("A 3rd", "C 2nd","D 2nd", "E 1st Open", "G 1st",
             "E 1st Open", "D 2nd", "C 2nd", "A 3rd", "G 3rd Open", "E 4th", "D 4th Open", "C 5th",
             "A 5th Open", "G 6th", "E 6th Open", "G 6th", "A 5th Open", "C 5th", "D 4th Open",
-            "E 4th", "G 3rd Open", "A 3rd")
+            "E 4th", "G 3rd Open", "A 3rd"),
+
+        "G Major Scale" to listOf("G 6th", "A 5th Open", "B 5th", "C 5th", "D 4th Open", "E 4th",
+            "F# 4th","G 3rd Open", "A 3rd", "B 2nd Open","C 2nd", "D 2nd", "E 1st Open",
+            "F# 1st", "G 1st", "F# 1st", "E 1st Open", "D 2nd", "C 2nd", "B 2nd Open", "A 3rd",
+            "G 3rd Open", "F# 4th", "E 4th", "D 4th Open", "C 5th", "B 5th", "A 5th Open", "G 6th",
+            "F# 6th", "E 6th Open", "F# 6th", "G 6th"),
+
+        "E Minor Pentatonic" to listOf("E 4th", "G 3rd Open", "A 3rd", "B 2nd Open", "D 2nd",
+            "E 1st Open", "G 1st", "E 1st Open", "D 2nd", "B 2nd Open", "A 3rd", "G 3rd Open",
+            "E 4th", "D 4th Open", "B 5th", "A 5th Open", "G 6th", "E 6th Open",
+            "G 6th", "A 5th Open", "B 5th", "D 4th Open", "E 4th")
         // Add more scales with their correct sequences
     )
 
-
+    //this function is used to play mpe files
     private fun setupMediaPlayer(noteResourceId: Int) {
         mediaPlayer?.release() // Release any previously playing player
         mediaPlayer = MediaPlayer.create(this, noteResourceId)
@@ -47,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         mediaPlayer?.start()
     }
 
+    //this use to make button play notes that is corresponding to its mp3 files
     private fun setupButtonNotes(scale: String) {
 
 
@@ -744,7 +761,7 @@ class MainActivity : AppCompatActivity() {
                 "D 4th" to R.raw.d_4th,
                 "E 4th" to R.raw.e_4th,
                 "F# 4th" to R.raw.f_sharp_4th,
-                "G 3rd Open" to R.raw.e_6th_open,
+                "G 3rd Open" to R.raw.g_3rd_open,
                 "A 3rd" to R.raw.a_3rd,
                 "B 2nd Open" to R.raw.b_2nd_open,
                 "C 2nd" to R.raw.c_2nd,
@@ -786,6 +803,7 @@ class MainActivity : AppCompatActivity() {
             scaleSpinner.adapter = adapter
         }
 
+        //this is used for floating button to check whether users have played correct or not
         val finishButton: FloatingActionButton = findViewById(R.id.finishButton)
         finishButton.setOnClickListener {
             // Call a method that checks if the user played the correct scale
@@ -806,12 +824,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //this function is used to update scale that users have chosen
     private fun updateScale(scale: String) {
         // This could involve updating the visible notes, changing button labels, etc.
         currentScale = scale  // Update the current scale
         setupButtonNotes(scale)
     }
 
+    //this function is used to destroy mp3 that is playing
     override fun onDestroy() {
         super.onDestroy()
         mediaPlayer?.release()
