@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity() {
             "G 3rd Open", "F# 4th", "E 4th", "D 4th Open", "C 5th", "B 5th", "A 5th Open", "G 6th",
             "F# 6th", "E 6th Open", "F# 6th", "G 6th"),
 
-        "E Minor Pentatonic" to listOf("E 4th", "G 3rd Open", "A 3rd", "B 2nd Open", "D 2nd",
-            "E 1st Open", "G 1st", "E 1st Open", "D 2nd", "B 2nd Open", "A 3rd", "G 3rd Open",
-            "E 4th", "D 4th Open", "B 5th", "A 5th Open", "G 6th", "E 6th Open",
-            "G 6th", "A 5th Open", "B 5th", "D 4th Open", "E 4th")
+        "E Harmonic Minor" to listOf("E 4th", "F# 4th", "G 3rd Open", "A 3rd", "B 2nd Open",
+            "C 2nd","D 2nd", "E 1st Open", "G 1st", "E 1st Open", "D 2nd", "C 2nd", "B 2nd Open",
+            "A 3rd", "G 3rd Open",  "F# 4th", "E 4th", "D 5th","C 5th", "B 5th", "A 5th Open",
+            "G 6th", "E 6th Open" , "G 6th", "A 5th Open","B 5th" ,"C 5th" , "D 5th", "E 4th")
         // Add more scales with their correct sequences
     )
 
@@ -781,6 +781,25 @@ class MainActivity : AppCompatActivity() {
                 "B 2nd Open" to R.raw.b_2nd_open,
                 "D 2nd" to R.raw.d_2nd,
                 "E 1st Open" to R.raw.e_1st_open,
+                "G 1st" to R.raw.g_1st
+            )
+            "E Harmonic Minor" -> mapOf(
+                "E 6th Open" to R.raw.e_6th_open,
+                "F# 6th" to R.raw.f_sharp_6th,
+                "G 6th" to R.raw.g_6th,
+                "A 5th Open" to R.raw.a_5th_open,
+                "B 5th" to R.raw.b_5th,
+                "C 5th" to R.raw.c_5th,
+                "D 4th Open" to R.raw.d_4th_open,
+                "E 4th" to R.raw.e_4th,
+                "F# 4th" to R.raw.f_sharp_4th,
+                "G 3rd Open" to R.raw.g_3rd_open,
+                "A 3rd" to R.raw.a_3rd,
+                "B 2nd Open" to R.raw.b_2nd_open,
+                "C 2nd" to R.raw.c_2nd,
+                "D 2nd" to R.raw.d_2nd,
+                "E 1st Open" to R.raw.e_1st_open,
+                "F# 1st" to R.raw.f_sharp_1st,
                 "G 1st" to R.raw.g_1st
             )
             else -> emptyMap()
