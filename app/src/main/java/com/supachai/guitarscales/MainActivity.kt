@@ -696,6 +696,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //function to validate note sequence of each scale
     private fun validateNotesAndShowPopup() {
         val isCorrect = checkIfScalePlayedCorrectly()
         if (isCorrect) {
@@ -719,6 +720,7 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
+    //mapping to audio file
     private fun getNotesForScale(scale: String): Map<String, Int> {
         return when (scale) {
             "C Major Scale" -> mapOf(
