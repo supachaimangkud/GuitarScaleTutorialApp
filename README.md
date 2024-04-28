@@ -1,3 +1,5 @@
+This project need to be cloned on Android Studio. The link for cloning this project is under the code tab. 
+
 In order to run this project, the code need to be run on the MainActivity.ky file and on the android studio.  Path: app/src/main/java/com/supachai/guitarscales/MainActivity.kt
 
 As this application uses Samsung Galaxy A14 5G as virtual device and physical device for testing so it should use the same device for testing.
